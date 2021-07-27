@@ -1,0 +1,22 @@
+/* The other files */
+@import url(head.css);
+@import url(infobox.css);
+@import url(simple-advanced-buttons.css);
+@import url(forms-simple-advanced.css);
+@import url(result.css);
+@import url(cards.css);
+@import url(footer.css);
+
+/* External Lib */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+* {
+    background-color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+
+

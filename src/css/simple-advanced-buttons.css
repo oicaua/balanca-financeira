@@ -1,0 +1,10 @@
+.buttons-simple-advanced {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-simple {
+    margin-right: 5px;
+}

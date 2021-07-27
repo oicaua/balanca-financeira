@@ -1,0 +1,9 @@
+.simple-form {
+    margin: 20px 0px 20px 15px;
+    display: inline-block;
+}
+
+.advanced-form {
+    display: none;
+    margin: 20px 0px 20px 15px;
+}

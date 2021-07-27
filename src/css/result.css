@@ -1,0 +1,15 @@
+.final-result {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button-send {
+    margin-bottom: 10px;
+}
+
+.warning-send-button {
+    display: none;
+    color: red
+}

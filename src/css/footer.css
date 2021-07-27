@@ -1,0 +1,14 @@
+.footerClass {
+    height: 70px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: solid lightgrey 1px;
+    background-color: #F7F7F8;
+}
+
+.footerClass > p,
+.footerClass > p > i {
+    background-color: #F7F7F8;
+}

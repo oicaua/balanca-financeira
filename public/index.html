@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <!-- Bootstrap: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <title>Balança Financeira</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row head-menu">
+            <div class="col-sm-3 col-0">
+            </div>
+            <div class="col-sm-6 col-9 title">
+                <h1>Balança Financeira</h1>
+            </div>
+            <div class="col-3 socialmedia-area">
+                <a href="http://github.com/oicaua" target="_blank" class="menu-icons"><i class="bi bi-github"
+                        style="color: black;"></i></a>
+                <a href="http://instagram.com/oicaua" target="_blank" class="menu-icons"><i class="bi bi-instagram"
+                        style="color: #C13584;"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <!-- ADS Google Left-->
+            </div>
+            <div class="col-md-8">
+                <i class="bi bi-info-circle">
+                    <p class="texto-info">O sistema te auxilia a encontrar uma finança equilibrada, para isso, escolha
+                        entre os modos simples e avançado. Após isso, coloque seu salário para que o sistema calcule
+                        usando a técnica dos 6 potes - proporcionando uma divisão saudável dos seus recursos. Tenha em
+                        mente que são valores aproximados.</p>
+                </i>
+                <span class="buttons-simple-advanced">
+                    <button type="button" class="btn btn-primary button-simple" id="simple-button"
+                        onclick="changeButton('simple')">Simples</button>
+                    <button type="button" class="btn btn-outline-primary button-advanced" id="advanced-button"
+                        onclick="changeButton('advanced')">Avançado</button>
+                </span>
+                <!-- Mode Simple (Simples): -->
+                <form id="simple-form" class="simple-form">
+                    <p>Salário</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="salary-simple">
+                    </div>
+                    <button class="btn btn-primary button-send" type="submit" value="Enviar">Enviar</button>
+                </form>
+                <!-- Mode Advanced (Avançado): -->
+                <form id="advanced-form" class="advanced-form">
+                    <p>Salário</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="advanced-salary">
+                    </div>
+                    <p>Quanto você gasta com contas/despesas:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot1">
+                    </div>
+                    <p>Quanto você gasta com lazer:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot2">
+                    </div>
+                    <p>Quanto você investe/guarda:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot3">
+                    </div>
+                    <p>Quanto você gasta com educação pessoal:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot4">
+                    </div>
+                    <p>Quanto você gasta com bens materiais:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot5">
+                    </div>
+                    <p>Quanto você doa/faz caridade:</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" aria-label="Amount" id="pot6">
+                    </div>
+                    <button class="btn btn-primary button-send" type="submit" value="Enviar">Enviar</button>
+                    <i class="warning-send-button" id="warning-send-button">Digite todos os campos antes de enviar. </i>
+                </form>
+                <!-- Results -->
+                <div class="final-result" id="final-result">
+                    <h3>Seus resultados:</h3>
+                </div>
+                <div class="cards" id="cards">
+                    <div class="card">
+                        <div class="Designation">
+                            <h3>Despesas</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card1">0</i></p>
+                            <p id="result-card-pot1">Suas despesas e contas não podem ser superiores a 55% da sua renda
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card card2">
+                        <div class="Designation">
+                            <h3>Lazer</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card2">0</i></p>
+                            <p id="result-card-pot2">Um gasto equilibrado para lazer é de até 10% da sua renda</p>
+                        </div>
+                    </div>
+                    <div class="card card3">
+                        <div class="Designation">
+                            <h3>Investimento</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card3">0</i></p>
+                            <p id="result-card-pot3">Juntar ou investir 10% da sua renda é o melhor a se fazer</p>
+                        </div>
+                    </div>
+                    <div class="card card4">
+                        <div class="Designation">
+                            <h3>Educação</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card4">0</i></p>
+                            <p id="result-card-pot4">Dedicar 10% da sua renda para Educação é investir no seu
+                                desenvolvimento</p>
+                        </div>
+                    </div>
+                    <div class="card card5">
+                        <div class="Designation">
+                            <h3>Bens Materiais</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card5">0</i></p>
+                            <p id="result-card-pot5">Compre bens materiais, mas não gaste mais de 10% da sua renda
+                                mensal</p>
+                        </div>
+                    </div>
+                    <div class="card card6">
+                        <div class="Designation">
+                            <h3>Caridade</h3>
+                            <p class="numberResultCard">O valor ideal é: $<i id="number-result-card6">0</i></p>
+                            <p id="result-card-pot6">Com apenas 5% da sua renda é possível ajudar aqueles que precisam
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2">
+                <!-- Ads Google -->
+            </div>
+        </div>
+        <div class="row">
+            <!-- Ads Google for mobile -->
+        </div>
+        <div class="row">
+            <div class="col-12 footerClass">
+                <p>Feito com <i class="bi bi-heart-fill" style="color: red;"></i> por Cauã</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../src/script/main.js"></script>
+
+</html>

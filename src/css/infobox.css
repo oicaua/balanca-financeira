@@ -1,0 +1,21 @@
+.bi-info-circle {
+    margin-left: 15px;
+}
+
+.bi-info-circle > p {
+    display: none;
+}
+
+.bi-info-circle:hover > p {
+    display: inline-block;
+    font-style: normal;
+    border: solid 1px lightgray;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .bi-info-circle {
+        display: none;
+    }
+}

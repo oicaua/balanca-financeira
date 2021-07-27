@@ -1,0 +1,37 @@
+.cards {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 287px;
+    margin: 10px 10px 0px 10px;
+    padding-top: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+}
+
+.Designation {
+    padding: 2px 16px;
+    background-color: white;
+    color:black;
+}
+
+.Designation > h3,
+.Designation > p {
+    padding: 2px 16px;
+    background-color: white;
+    color:black;
+}
+
+.Designation > p > i {
+    background-color: white;
+    color:black;
+}
