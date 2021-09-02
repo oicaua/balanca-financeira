@@ -9,4 +9,4 @@
 ##### -> There are two options; simple mode (just put the salary) and advanced mode (put all expenses);
 
 ## See it by yourself
-##### Try it on: {maintenance}
+##### Try it on: https://balanca-financeira.netlify.app/public/index.html
